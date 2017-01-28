@@ -1,5 +1,5 @@
 #VERSION: 1.00
-#AUTHORS: Diego de las Heras (ngosang@hotmail.es)
+#AUTHORS: Pireo (saint.seiya_2017@libero.it)
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
