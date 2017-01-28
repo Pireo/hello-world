@@ -61,9 +61,10 @@ class linuxtracker(object):
             params = dict(attrs)
             if tag == 'a':
                 if 'href' in params:
-                    if self.td_counter == 1:
+                    if self.td_counter == 2:
                         self.current_item['link'] = params['href'].strip()
-                    elif self.td_counter == 7:
+                        search_torrents = ()
+                    elif self.td_counter == 3:
                         self.current_item['desc_link'] = params['href'].strip()
 
             elif tag == 'tr':  
@@ -93,7 +94,7 @@ class linuxtracker(object):
                 self.current_item['seeds'] = data.strip()
                 if not self.current_item['seeds'].isdigit():
                     self.current_item['seeds'] = 0
-            elif self.td_counter == 7:
+            elif self.td_counter == 3:
                 if 'name' not in self.current_item:
                     self.current_item['name'] = data
                 else:
