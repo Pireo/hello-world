@@ -1,4 +1,4 @@
-#VERSION: 1.01
+#VERSION: 1.02
 #AUTHORS:lima66
 
 try:
@@ -13,7 +13,7 @@ from helpers import retrieve_url, download_file
 
 
 class rockbox(object):
-    url = "http://psychocydd.co.uk/"
+    url = "https://rawkbawx.rocks/"
     name = "RockBox"
     supported_categories = {'all': 'all',
                             'music': 'music',
@@ -122,7 +122,7 @@ class rockbox(object):
         parser = self.MyHtmlParser(self.url)
 
         query = query.replace("%20", "+")
-        # http://psychocydd.co.uk/torrents.php?active=1&search=the+theory&&options=0&order=seeds&by=DESC&page=0
+        # https://rawkbawx.rocks/torrents.php?active=1&search=the+theory&&options=0&order=seeds&by=DESC&page=0
         number_page = 0
         while True:
             page = "".join((self.url, '/torrents.php?active=1&search={0}&&options=1&order=seeds&by=DESC&page={1}')).format(query, number_page)
