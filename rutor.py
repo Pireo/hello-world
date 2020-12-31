@@ -90,7 +90,7 @@ class rutor(object):
 
     def search_page(self, what, cat, start):
         params = {'url': self.url,
-                'q': urllib.parse.quote(what),
+                'q': what,
                 'f': self.supported_categories[cat],
                 'start': start}
         dat = self.retrieve_url(self.query_pattern % params).decode('utf-8')
